@@ -1,5 +1,6 @@
 .nav-pc {
     width: calc(100% - 20px);
+    background-color: #f9f9f9;
 }
 
 .topbar {
