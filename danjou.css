@@ -4,7 +4,7 @@
 
 .topbar {
     width: calc(100% - 20px);
-    border-bottom:solid 2px #fff;
+    border-bottom:solid 2px #000;
     padding: 10px;
     color: #000;
 }
