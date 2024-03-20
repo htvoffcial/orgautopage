@@ -2,6 +2,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,25 +15,37 @@
             </div>
         </div>
     </div>
+    <div class="nav-pc">
         <div class="container">
 
         </div>
+    </div>
     <style>
-    .topbar{
-        background: rgb(32, 178, 139);
-        padding:10px;
-        width:100%;
-        color:#fff;
-    }
-    .container{
-        width: 800px;
-        margin: 0 auto;
-    }
-    body,html{
-        margin:0px;
-        width:100%;
-        height:100%;
-    }
+        .nav-pc {
+            width: calc(100% - 20px);
+        }
+
+        .topbar {
+            width: calc(100% - 20px);
+            background: rgb(32, 178, 139);
+            padding: 10px;
+            color: #fff;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        body,
+        html {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            font-family: "IBM Plex Sans JP", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
     </style>
 </body>
 
