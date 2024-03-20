@@ -53,10 +53,11 @@ html {
     .container {
         width: 600px;
         margin: 0 auto;
+        width:95%;
     }
     .nav-pc {
         overflow-x: scroll;
-        width: 95%;
+        width: calc(100% - 10px);
         background-color: #f9f9f9;
         padding: 5px;
     }
