@@ -4,9 +4,9 @@
 
 .topbar {
     width: calc(100% - 20px);
-    background: rgb(32, 178, 139);
+    border-bottom:solid 2px #fff;
     padding: 10px;
-    color: #fff;
+    color: #000;
 }
 
 .container {
