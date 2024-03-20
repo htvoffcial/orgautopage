@@ -20,8 +20,10 @@
     display: flex;
 }
 .container{
-    background:#888;
     color:#fff;
+}
+.list{
+    background:#888;
 }
 .nav-a {
 
