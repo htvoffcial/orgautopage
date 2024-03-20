@@ -1,15 +1,18 @@
 .nav-pc {
     width: calc(100% - 20px);
     background-color: #f9f9f9;
-    padding:5px;
-    color:#000;
+    padding: 5px;
+}
+
+.navi-a {
+    color: #000;
     text-decoration: none;
-    font-size:medium;
+    font-size: medium;
 }
 
 .topbar {
     width: calc(100% - 20px);
-    border-bottom:solid 2px #000;
+    border-bottom: solid 2px #000;
     padding: 10px;
     color: #000;
 }
