@@ -7,6 +7,9 @@
     width: calc(100% - 20px);
     padding: 5px;
 }
+.fb-1{
+    display: flex;
+}
 .nav-a {
 
     color: #000;
