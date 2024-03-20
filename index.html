@@ -22,11 +22,15 @@
         <div class="container">
             <a href="about.html" class="nav-a">DanJou(ダンジョウ)とは？</a>
             <a href="howtouse.html" class="nav-a">DanJouの使い方</a>
-            <a href="https://danjou-pages-dev.translate.goog/?_x_tr_sl=ja&_x_tr_tl=en" class="nav-a" style="float:right" id="switchlang">English</a>
+            <a class="nav-a" style="float:right" id="switchlang"></a>
             <script>
                 window.onload=function(){
                     if(location.host == "danjou.pages.dev"){
-                    document.getElementById("switchlang").innerHTML
+                        document.getElementById("switchlang").innerHTML="English";
+                        document.getElementById("switchlang").setAttribute("href","https://danjou-pages-dev.translate.goog/?_x_tr_sl=ja&_x_tr_tl=en");
+                    }else{
+                        document.getElementById("switchlang").innerHTML="Japanese";
+                        document.getElementById("switchlang").setAttribute("href","https://danjou.pages.dev");
                     }
                 }
             </script>
