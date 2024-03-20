@@ -56,7 +56,7 @@ html {
     }
     .nav-pc {
         overflow-x: scroll;
-        width: calc(100% - 10px);
+        width: 95%;
         background-color: #f9f9f9;
         padding: 5px;
     }
