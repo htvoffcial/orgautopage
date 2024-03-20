@@ -59,6 +59,9 @@ html {
     color:#fff;
     margin-left:10px;
 }
+summary{
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
     .container {
         width: 600px;
