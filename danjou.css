@@ -54,4 +54,9 @@ html {
         width: 600px;
         margin: 0 auto;
     }
+    .nav-pc {
+        width: calc(100% - 10px);
+        background-color: #f9f9f9;
+        padding: 5px;
+    }
 }
