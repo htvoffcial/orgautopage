@@ -8,7 +8,9 @@
     width: calc(100% - 20px);
     padding: 5px;
 }
-
+ul {
+    list-style: none;
+}
 .input-1 {
     padding: 10px;
     border: solid #000 2px;
@@ -21,6 +23,7 @@
 }
 
 .list{
+    
     color:#f9f9f9;
     background:#222;
 }
