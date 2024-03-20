@@ -41,7 +41,7 @@ ul {
     color: #000;
 }
 .bottom {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     display:block;
     text-align:center;
     padding:20px;
