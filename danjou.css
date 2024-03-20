@@ -8,7 +8,10 @@
     padding: 5px;
 }
 .input-1{
-    
+    padding:10px;
+    border:solid #000 2px;
+    width:100%;
+    border-radius:5px;
 }
 .fb-1{
     display: flex;
