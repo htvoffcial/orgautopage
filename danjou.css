@@ -1,6 +1,10 @@
 .nav-pc {
     width: calc(100% - 20px);
     background-color: #f9f9f9;
+    padding:5px;
+    color:#000;
+    text-decoration: none;
+    font-size:medium;
 }
 
 .topbar {
