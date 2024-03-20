@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    <link href="danjou.css" rel="stylesheet" type="text/css" media="all">
+    <!--meta情報-->
+    <title>DanJou(ダンジョウ) 団体情報サイト</title>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="container">
+            <div>
+                <span style="font-size:small;background-color: #f4f4f4;color:rgb(68, 65, 65);font-weight: bold;padding:2px;border-radius: 5px;">団体情報サイト</span><br><span style="font-size:large;color:rgb(0, 0, 0);font-weight: bold;padding:2px;border-radius: 5px;">DanJou</span>
+            </div>
+        </div>
+    </div>
+    <div class="nav-pc">
+        <div class="container">
+            <a href="about.html" class="nav-a">DanJou(ダンジョウ)とは？</a>
+            <a href="howtouse.html" class="nav-a">DanJouの使い方</a>
+            <a class="nav-a" style="float:right" id="switchlang"></a>
+            <script>
+                window.onload=function(){
+                    if(location.host == "danjou.pages.dev"){
+                        document.getElementById("switchlang").innerHTML="English";
+                        document.getElementById("switchlang").setAttribute("href","https://danjou-pages-dev.translate.goog/?_x_tr_sl=ja&_x_tr_tl=en");
+                    }else{
+                        document.getElementById("switchlang").innerHTML="Japanese";
+                        document.getElementById("switchlang").setAttribute("href","https://danjou.pages.dev");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="fb-1">
+                <div class="details-1">
+                    <h1>検索結果</h1>
+                    <p>検索結果の一覧です</p>
+                    <div>
+                        <h2>名称・都道府県・</h2>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
