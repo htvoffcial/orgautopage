@@ -51,14 +51,11 @@
 
                             data.forEach(function (item) {
                                 var listItem = document.createElement("div");
-                                listItem.innerHTML = 
-                                "<table>"
-                                     +"<tr><td>組織番号</td><tb><span style='color:orange;font-size:18px;'>" + item.orgid + "</span></tb></tr>" +
+                                listItem.innerHTML = "<table?<tr><td>組織番号</td><tb><span style='color:orange;font-size:18px;'>" + item.orgid + "</span></tb></tr>" +
                                      "<tr><tb>名称のカタカナ表記</tb><tb>"+item.meishokatakana + "<br></tb></tr><tr><tb>名称</tb><tb><span style='font-size:21px;'>" +
                                     item.meisho + "</span></tb></tr><tr><tb>活動地域</tb><tb>" +
                                     item.region + "</tb></tr><tr><tb>最終更新日</tb><tb>" +
-                                    item.lastupdate+"</tb></tr>"+
-                                "</table>"
+                                    item.lastupdate+"</tb></tr>"+"</table>"
                                 resultDiv.appendChild(listItem);
                                 document.title = item.meisho + "の情報 DanJou(ダンジョウ)団体情報検索";
                                 document.getElementById("titls").innerHTML = item.meisho + "の情報";
