@@ -32,6 +32,11 @@
     <div class="main">
         <div class="container">
             <h1 id="titls"></h1>
+            <h2>
+                簡易wiki
+            </h2>
+            <p id="kaniwiki"></p>
+            <h2>詳細情報</h2>
             <div id="result"></div>
             <div id="lsta"></div>
             <script>
@@ -51,8 +56,10 @@
                             var resultDiv = document.getElementById("result");
 
                             data.forEach(function (item) {
+
                                 var listItem = document.createElement("div");
                                 var hed = document.head;
+                                document.getElementById("kaniwiki").innerHTML="content",item.meisho+"("+item.meishokatakana+")の組織情報の詳細を見る 組織番号は"+item.orgid+"で、現在の所在地は"+item.region+"である。";
                                 var description1 = document.createElement("meta");
                                 description1.setAttribute("name","description");
                                 description1.setAttribute("content",item.meisho+"("+item.meishokatakana+")の組織情報の詳細を見る 組織番号は"+item.orgid+"で、現在の所在地は"+item.region+"である。");
