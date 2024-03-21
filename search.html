@@ -70,7 +70,7 @@
                                             data.forEach(function (item) {
                                                 kensuu++;
                                                 var listItem = document.createElement("div");
-                                                listItem.innerHTML = "<a style='color:#000;' href='details?id=" + item.orgid + "'>組織番号:" + item.orgid + "<br>" +
+                                                listItem.innerHTML = "<a style='color:#000;' href='details?" + item.orgid + "'>組織番号:" + item.orgid + "<br>" +
                                                     item.meishokatakana + "<br><span style='font-size:21px;'>" +
                                                     item.meisho + "</span><br>" +
                                                     item.region + "<br><hr></a>"
@@ -120,7 +120,7 @@
                                             data.forEach(function (item) {
 
                                                 var listItem = document.createElement("div");
-                                                listItem.innerHTML = "<a style='color:#000;' href='details?id=" + item.orgid + "'>組織番号:" + item.orgid + "<br>" +
+                                                listItem.innerHTML = "<a style='color:#000;' href='details?" + item.orgid + "'>組織番号:" + item.orgid + "<br>" +
                                                     item.meishokatakana + "<br><span style='font-size:21px;'>" +
                                                     item.meisho + "</span><br>" +
                                                     item.region + "<br><hr></a>"

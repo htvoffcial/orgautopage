@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    <link href="danjou.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!--meta情報-->
+    
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="container">
+            <div>
+                <span
+                    style="font-size:small;background-color: #f4f4f4;color:rgb(68, 65, 65);font-weight: bold;padding:2px;border-radius: 5px;">団体情報サイト</span><br><span
+                    style="font-size:large;color:rgb(0, 0, 0);font-weight: bold;padding:2px;border-radius: 5px;">DanJou</span>
+            </div>
+        </div>
+    </div>
+    <div class="nav-pc">
+        <div class="container">
+            <a href="about.html" class="nav-a">DanJou(ダンジョウ)とは？</a>
+            <a href="howtouse.html" class="nav-a">DanJouの使い方</a>
+            <a class="nav-a" style="float:right" id="switchlang"></a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div id="result"></div>
+            <script>
+                $.ajax({
+                    type: "GET",
+                    url: "https://script.google.com/macros/s/AKfycbzUs-PosIUTPJgFcEIlljbOZyba3bkUN7Ivv2nTzwK1WZgVpTK_2KfCSHLuQrxRe5bG/exec",
+                    data: { orgid: decodeURI(location.search.substr(1)) },
+                    async: false
+                })
+                    .done(function (data) {
+                        var resultDiv = document.getElementById("result");
+                        console.log(data);
+                        if(data.length === 0){
+                            resultDiv.innerHTML="一致する団体が見つかりませんでした。";
+                        }else{
+                    
+                        var resultDiv = document.getElementById("result");
+                        
+                        data.forEach(function (item) {
+                            var listItem = document.createElement("div");
+                            listItem.innerHTML = "組織番号:<span style='color:orange;font-size:18px;'>" + item.orgid + "</span><br>" +
+                             item.meishokatakana + "<br><span style='font-size:21px;'>" +
+                               item.meisho + "</span><br>" +
+                                item.region + "<br>最終更新日:" +
+                                item.lastupdate
+                            resultDiv.appendChild(listItem);
+                            document.title=item.meisho+"の情報 DanJou(ダンジョウ)団体情報検索";
+                            document.getElementById("titls").innerHTML=item.meisho+"の情報";
+                            document.getElementById("lsta").innerHTML="登録の変更/作成履歴<br><br>"+item.history;
+                        });
+                       
+                    }
+                    
+                    })
+                    .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
+                    });
+            </script>
+        </div>
+        <div class="bottom">
+            <b>このサイトの情報について</b>
+            <p>
+                情報は連携サービスから配信された情報をそのまま表示しております。<br>内容の著作権は連携先のIndeeecsaが一切の権利を保有しておりますので<br>再掲載等についてはIndeeecsa
+                へお問い合わせください。
+            </p>
+            <a href="terms.html" style="color:#909090;text-decoration: none;">利用規約</a>
+            <a href="https://soshiki-bangou.indcs.haruharutv.jp/"
+                style="color:#909090;text-decoration: none;">Indeeecsa</a>
+            <br>
+            <p>運営者 : DanJou(ダンジョウ) 組織番号 : 2922138604748 Indeeecsa正規連携サービス</p>
+            <small>&copy; 2024 All right reserved DanJou Ltd.</small>
+        </div>
+</body>
+
+</html>
