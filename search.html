@@ -133,6 +133,9 @@
                                     .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                                         alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
                                     });
+                                }else{
+                                    document.getElementById("resultl2a").style.display = "none";
+                                    document.getElementById("resultl2").innerHTML = "組織番号の形式が正しくありません。";
                                 }
 
                                 function calculateCheckDigit(randomNumber) {
