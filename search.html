@@ -101,7 +101,7 @@
                                         console.log(data);
                                         if(data.length === 0){
                                             resultDiv2.innerHTML="番号で検索した結果はヒットしませんでした。<hr>番号が間違えていないかご確認ください。名称で検索した場合は上に出てくる可能性があります。";
-                                            document.getElementById("resultl").style.display="none";
+                                            document.getElementById("result2l").style.display="none";
                                         }else{
                                     
                                         var resultDiv2 = document.getElementById("result2");
@@ -114,6 +114,7 @@
                                                 item.region + "<br><hr></a>" 
                                             resultDiv2.appendChild(listItem);
                                         });
+                                        document.getElementById("resultl2a").style.display="none";
                                     }
                                     
                                     })
