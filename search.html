@@ -61,6 +61,7 @@
                                         console.log(data);
                                         if(data.length === 0){
                                             resultDiv.innerHTML="一致する団体が見つかりませんでした。<hr>HINT ヒント<br>もしかしたら、名称のみで都道府県を指定しない。もしくはその逆でやってみてください。<br>読み方で検索する場合は完全にわからない場合、カタカナでわかる途中までを入力してみてください。";
+                                            document.getElementById("resultl").style.display="none";
                                         }else{
                                     
                                         var resultDiv = document.getElementById("result");
@@ -76,6 +77,7 @@
                                         var dispken = document.createElement("p");
                                         resultDiv.appendChild(dispken);
                                         dispken.innerHTML="<center>件数:<span style='font-size:20px;font-weight:bold;'>"+kensuu+"</span>件</center>";
+                                        document.getElementById("resultl").style.display="none";
                                     }
                                     
                                     })
@@ -99,6 +101,7 @@
                                         console.log(data);
                                         if(data.length === 0){
                                             resultDiv2.innerHTML="番号で検索した結果はヒットしませんでした。<hr>番号が間違えていないかご確認ください。名称で検索した場合は上に出てくる可能性があります。";
+                                            document.getElementById("resultl").style.display="none";
                                         }else{
                                     
                                         var resultDiv2 = document.getElementById("result2");
