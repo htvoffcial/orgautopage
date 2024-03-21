@@ -53,10 +53,10 @@
                             data.forEach(function (item) {
                                 var listItem = document.createElement("div");
                                 listItem.innerHTML = "<table><tr><td>組織番号</td><td><span style='color:orange;font-size:18px;'>" + item.orgid + "</span></td></tr>" +
-                                     "<tr><td>名称のカタカナ表記</td><td>"+item.meishokatakana + "<br></td></tr><tr><td>名称</td><td><span style='font-size:21px;'>" +
+                                    "<tr><td>名称のカタカナ表記</td><td>" + item.meishokatakana + "<br></td></tr><tr><td>名称</td><td><span style='font-size:21px;'>" +
                                     item.meisho + "</span></td></tr><tr><td>活動地域</td><td>" +
                                     item.region + "</td></tr><tr><td>最終更新日</td><td>" +
-                                    item.lastupdate+"</td></tr>"+"</table>"
+                                    item.lastupdate + "</td></tr>" + "</table>"
                                 resultDiv.appendChild(listItem);
                                 document.title = item.meisho + "の情報 DanJou(ダンジョウ)団体情報検索";
                                 document.getElementById("titls").innerHTML = item.meisho + "の情報";
@@ -70,6 +70,29 @@
                         alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
                     });
             </script>
+            <style>
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                }
+
+                table tr {
+                    border-bottom: solid 1px #eee;
+                    cursor: pointer;
+                }
+
+                table tr:hover {
+                    background-color: #d4f0fd;
+                }
+
+                table th,
+                table td {
+                    text-align: center;
+                    width: 25%;
+                    padding: 15px 0;
+                }
+            </style>
         </div>
         <div class="bottom">
             <b>このサイトの情報について</b>
