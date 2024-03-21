@@ -106,7 +106,7 @@
                                     $.ajax({
                                     type: "GET",
                                     url: "https://script.google.com/macros/s/AKfycbzUs-PosIUTPJgFcEIlljbOZyba3bkUN7Ivv2nTzwK1WZgVpTK_2KfCSHLuQrxRe5bG/exec",
-                                    data: { key: decodeURI(location.search.substr(5)) },
+                                    data: { orgid: decodeURI(location.search.substr(5)) },
                                 })
                                     .done(function (data) {
                                         var resultDiv2 = document.getElementById("result2");
