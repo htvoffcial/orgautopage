@@ -26,6 +26,7 @@
         <div class="container">
             <a href="about.html" class="nav-a">DanJou(ダンジョウ)とは？</a>
             <a href="howtouse.html" class="nav-a">DanJouの使い方</a>
+            <a href="/" class="nav-a">トップページ</a>
             <a class="nav-a" style="float:right" id="switchlang"></a>
         </div>
     </div>
@@ -40,6 +41,7 @@
             <div id="result"></div>
             <div id="lsta"></div>
             <script>
+                $(document).ready(function(){
                 $.ajax({
                     type: "GET",
                     url: "https://script.google.com/macros/s/AKfycbzUs-PosIUTPJgFcEIlljbOZyba3bkUN7Ivv2nTzwK1WZgVpTK_2KfCSHLuQrxRe5bG/exec",
@@ -81,6 +83,7 @@
                     .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                         alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
                     });
+                });
             </script>
             <style>
                 table {
