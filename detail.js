@@ -1,34 +1,42 @@
-var kensuu = 0;
-$.ajax({
-    type: "GET",
-    url: "https://script.google.com/macros/s/AKfycbw7LGlAZx6yYTf37wRM7HoMRMayOalEQcb3razeqBhKAW18vBsPIwe3_eH7BlkeMs24/exec",
-    data: { key: decodeURI(location.search.substr(5)) },
-})
-    .done(function (data) {
-        var resultDiv = document.getElementById("result");
-        console.log(data);
-        if (data.length === 0) {
-            resultDiv.innerHTML = "一致する団体が見つかりませんでした。<hr>HINT ヒント<br>もしかしたら、名称のみで都道府県を指定しない。もしくはその逆でやってみてください。<br>読み方で検索する場合は完全にわからない場合、カタカナでわかる途中までを入力してみてください。";
-            document.getElementById("resultl").style.display = "none";
-        } else {
-
-            var resultDiv = document.getElementById("result");
-            data.forEach(function (item) {
-                kensuu++;
-                var listItem = document.createElement("div");
-                listItem.innerHTML = "<a style='color:#000;' href='details?_escaped_fragment_=" + item.orgid + "'>組織番号:" + item.orgid + "<br>" +
-                    item.meishokatakana + "<br><span style='font-size:21px;'>" +
-                    item.meisho + "</span><br>" +
-                    item.region + "<br><hr></a>"
-                resultDiv.appendChild(listItem);
-            });
-            var dispken = document.createElement("p");
-            resultDiv.appendChild(dispken);
-            dispken.innerHTML = "<center>件数:<span style='font-size:20px;font-weight:bold;'>" + kensuu + "</span>件</center>";
-            document.getElementById("resultl").style.display = "none";
-        }
-
+$(document).ready(function(){
+    $.ajax({
+        type: "GET",
+        url: "https://script.google.com/macros/s/AKfycbzUs-PosIUTPJgFcEIlljbOZyba3bkUN7Ivv2nTzwK1WZgVpTK_2KfCSHLuQrxRe5bG/exec",
+        data: { orgid: decodeURI(location.search.substr(20)) }
     })
-    .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-        alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
+        .done(function (data) {
+            var resultDiv = document.getElementById("result");
+            console.log(data);
+            if (data.length === 0) {
+                resultDiv.innerHTML = "一致する団体が見つかりませんでした。";
+            } else {
+
+                var resultDiv = document.getElementById("result");
+
+                data.forEach(function (item) {
+
+                    var listItem = document.createElement("div");
+                    var hed = document.head;
+                    document.getElementById("kaniwiki").innerHTML=item.meisho+"("+item.meishokatakana+")の組織情報の詳細、組織番号は"+item.orgid+"で、現在の所在地は"+item.region+"である。";
+                    var description1 = document.createElement("meta");
+                    description1.setAttribute("name","description");
+                    description1.setAttribute("content",item.meisho+"("+item.meishokatakana+")の組織情報の詳細を見る 組織番号は"+item.orgid+"で、現在の所在地は"+item.region+"である。");
+                    hed.appendChild(description1);
+                    listItem.innerHTML = "<table><tr><td>組織番号</td><td><span style='color:orange;font-size:18px;'>" + item.orgid + "</span></td></tr>" +
+                        "<tr><td>名称のカタカナ表記</td><td>" + item.meishokatakana + "<br></td></tr><tr><td>名称</td><td><span style='font-size:21px;'>" +
+                        item.meisho + "</span></td></tr><tr><td>活動地域</td><td>" +
+                        item.region + "</td></tr><tr><td>最終更新日</td><td>" +
+                        item.lastupdate + "</td></tr>" + "</table>"
+                    resultDiv.appendChild(listItem);
+                    document.title = item.meisho + "の情報 DanJou(ダンジョウ)団体情報検索";
+                    document.getElementById("titls").innerHTML = item.meisho + "の情報";
+                    document.getElementById("lsta").innerHTML = "登録の変更/作成履歴<br><br>" + item.history;
+                });
+
+            }
+
+        })
+        .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
+        });
     });
