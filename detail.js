@@ -37,6 +37,6 @@ $(document).ready(function(){
 
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("読み込めませんでした", XMLHttpRequest, textStatus, errorThrown);
+            alert("読み込めませんでした、vpnや広告ブロッカーなどでブロックされていないかご確認ください。", XMLHttpRequest, textStatus, errorThrown);
         });
     });
