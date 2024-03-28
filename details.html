@@ -29,6 +29,17 @@
             <a href="/" class="nav-a">トップページ</a>
             <a class="nav-a" style="float:right" id="switchlang"></a>
         </div>
+        <script>
+            window.onload=function(){
+                if(location.host == "danjou.pages.dev"){
+                    document.getElementById("switchlang").innerHTML="English";
+                    document.getElementById("switchlang").setAttribute("href","https://danjou-pages-dev.translate.goog"+location.pathname+"?_x_tr_sl=ja&_x_tr_tl=en"+location.hash);
+                }else{
+                    document.getElementById("switchlang").innerHTML="Japanese";
+                    document.getElementById("switchlang").setAttribute("href","https://danjou.pages.dev"+location.pathname+location.hash);
+                }
+            }
+        </script>
     </div>
     <div class="main">
         <div class="container">
