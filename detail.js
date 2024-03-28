@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
-        url: "https://script.google.com/macros/s/AKfycbzUs-PosIUTPJgFcEIlljbOZyba3bkUN7Ivv2nTzwK1WZgVpTK_2KfCSHLuQrxRe5bG/exec",
-        data: { orgid: decodeURI(location.search.substr(20)) }
+        url: "https://smn.glitch.me/orgdb-relay.php",
+        data: { orgid: decodeURI(location.hash.substr(2)) }
     })
         .done(function (data) {
             var resultDiv = document.getElementById("result");
