@@ -5,6 +5,7 @@ $(document).ready(function(){
         data: { orgid: decodeURI(location.hash.substr(2)) }
     })
         .done(function (data) {
+            document.getElementById("lb").style.display="none";
             var resultDiv = document.getElementById("result");
             console.log(data);
             if (data.length === 0) {
