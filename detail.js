@@ -1,8 +1,15 @@
 $(document).ready(function(){
+    if(location.search.substr(1).indexOf('_escaped_fragment_')){
+        var ctsr = 20;
+        var data2 = decodeURI(location.search.substr(ctsr));
+    }else{
+        var ctsr = 2;
+        var data2 = decodeURI(location.hash.substr(ctsr));
+    }
     $.ajax({
         type: "GET",
         url: "https://smn.glitch.me/orgdb-relay.php",
-        data: { orgid: decodeURI(location.hash.substr(2)) }
+        data: { orgid: data2 }
     })
         .done(function (data) {
             document.getElementById("lb").style.display="none";
