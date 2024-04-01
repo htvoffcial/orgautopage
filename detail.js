@@ -1,14 +1,14 @@
 $(document).ready(function(){
-    if(location.search.substr(1).indexOf('escaped')){
+    if (location.search.substr(1).indexOf('escaped') !== -1) {
         var ctsr = 20;
         var data2 = decodeURI(location.search.substr(ctsr));
-        write1(data2);
         console.log("GooglePattern");
-    }else{
+        write1(data2); 
+    } else {
         var ctsr = 2;
         var data2 = decodeURI(location.hash.substr(ctsr));
-        write1(data2);
         console.log("NormalPattern");
+        write1(data2);
     }
 });
 function write1(data2){
