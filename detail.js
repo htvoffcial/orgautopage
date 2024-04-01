@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if(location.search.substr(1).indexOf('_escaped_fragment_')){
+    if(location.search.substr(1).indexOf('escaped')){
         var ctsr = 20;
         var data2 = decodeURI(location.search.substr(ctsr));
         write1(data2);
