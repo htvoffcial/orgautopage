@@ -16,7 +16,6 @@ function write1(data2){
         type: "GET",
         url: "https://smn.glitch.me/orgdb-relay.php",
         data: { orgid: data2 },
-        async: false
     })
         .done(function (data) {
             document.getElementById("lb").style.display="none";
@@ -52,6 +51,6 @@ function write1(data2){
 
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("読み込めませんでした、vpnや広告ブロッカーなどでブロックされていないかご確認ください。", XMLHttpRequest, textStatus, errorThrown);
+            alert("読み込めませんでした、vpnや広告ブロッカーなどでブロックされていないかご確認ください。 \n 再読み込みすると表示される可能性があります。", XMLHttpRequest, textStatus, errorThrown);
         });
     }
