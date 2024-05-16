@@ -16,6 +16,7 @@ function write1(data2){
         type: "GET",
         url: "https://smn.glitch.me/orgdb-relay.php",
         data: { orgid: data2 },
+        async: false
     })
         .done(function (data) {
             document.getElementById("lb").style.display="none";
