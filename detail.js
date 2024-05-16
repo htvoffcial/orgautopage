@@ -52,6 +52,6 @@ function write1(data2){
 
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("読み込めませんでした、vpnや広告ブロッカーなどでブロックされていないかご確認ください。 \n 再読み込みすると表示される可能性があります。", XMLHttpRequest, textStatus, errorThrown);
+            alert("読み込めませんでした、vpnや広告ブロッカーなどでブロックされていないかご確認ください。 \n \n i 再読み込みすると表示される可能性があります。", XMLHttpRequest, textStatus, errorThrown);
         });
     }
