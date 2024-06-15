@@ -16,8 +16,8 @@ function write1(data2){
         type: "GET",
         //smn.glitch.meでも同じパスで提供
         url: "https://haruharutv.xsrv.jp/orgdb-relay.php",
-        data: { orgid: data2 },
-        async: false
+        data: { orgid: data2 }
+        //,async: false
     })
         .done(function (data) {
             document.getElementById("lb").style.display="none";
