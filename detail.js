@@ -14,7 +14,8 @@ $(document).ready(function(){
 function write1(data2){
     $.ajax({
         type: "GET",
-        url: "https://smn.glitch.me/orgdb-relay.php",
+        //smn.glitch.meでも同じパスで提供
+        url: "https://haruharutv.xsrv.jp/orgdb-relay.php",
         data: { orgid: data2 },
         async: false
     })
