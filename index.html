@@ -70,8 +70,10 @@
                     <script>
                         function kp1(event) {
                           if (event.keyCode === 13) {
+                            if(document.getElementById("input1").value == ""){
+                            }else{
                             location.href="search?key="+document.getElementById("input1").value;
-                          }
+                            }
                         }
                       </script>
                 </div> 
