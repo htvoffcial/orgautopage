@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    if (location.search.substr(1).indexOf('escaped') !== -1) {
+    if (location.search.substr(1).indexOf('soshiki') !== -1) {
         var ctsr = 20;
         var data2 = decodeURI(location.search.substr(ctsr));
-        console.log("GooglePattern");
+        console.log("SearchPattern");
         write1(data2); 
     } else {
         var ctsr = 2;
