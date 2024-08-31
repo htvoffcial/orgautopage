@@ -17,7 +17,7 @@ function write1(data2){
         //smn.glitch.meでも同じパスで提供
         url: "https://haruharutv.xsrv.jp/orgdb-relay.php",
         data: { orgid: data2 }
-        //,async: false
+        ,async: false
     })
         .done(function (data) {
             document.getElementById("lb").style.display="none";
